@@ -15,6 +15,7 @@
     "apiVersion": "^1.4.0"
   },
   "dependencies": {
+    "@rebass/preset": "^4.0.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -28,6 +29,8 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-simple-code-editor": "^0.11.0",
+    "rebass": "^4.0.7",
+    "theme-ui": "^0.3.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -56,6 +59,8 @@
   },
   "devDependencies": {
     "@types/mermaid": "^8.2.1",
+    "@types/rebass": "^4.0.6",
+    "@types/theme-ui": "^0.3.2",
     "gh-pages": "^2.2.0",
     "np": "^6.2.3",
     "npm-run-all": "^4.1.5",

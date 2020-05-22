@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
-import './App.css';
 import mermaid from 'mermaid';
 import Editor from 'react-simple-code-editor';
-
-// import debounce from 'debounce';
+import { Box, Card } from 'rebass'
+import { ThemeProvider } from 'theme-ui'
+// @ts-ignore
+import preset from '@rebass/preset'
 
 // @ts-ignore
 mermaid.parseError = function(err:any,hash:any) {
@@ -35,21 +36,33 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Editor
-        value={diagram}
-        onValueChange={setDiagram}
-        highlight={code => code}
-        padding={10}
-        style={{
-          fontFamily: '"Fira code", "Fira Mono", monospace',
-          fontSize: 12,
-        }}
-      />
-
-      <div ref={mermaidContainer} />
-
-    </div>
+    <ThemeProvider theme={preset}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridGap: 4,
+          gridTemplateColumns: 'repeat(auto-fit, minmax(128px, 1fr))',
+          background: 'slategray',
+          height: '100vh',
+          padding: '1em'
+        }}>
+          <Card>
+            <Editor
+              value={diagram}
+              onValueChange={setDiagram}
+              highlight={code => code}
+              padding={10}
+              style={{
+                fontFamily: '"Fira code", "Fira Mono", monospace',
+                fontSize: 12,
+              }}
+            />
+          </Card>
+          <Card>
+            <div ref={mermaidContainer} />
+          </Card>
+        </Box>
+    </ThemeProvider>
   );
 }
 
