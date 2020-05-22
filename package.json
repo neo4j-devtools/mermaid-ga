@@ -1,6 +1,6 @@
 {
   "name": "@neo4j-apps/mermaid-ga",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "homepage": ".",
   "main": "dist/index.html",
